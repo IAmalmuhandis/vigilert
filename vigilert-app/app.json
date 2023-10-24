@@ -4,10 +4,10 @@
     "slug": "vigilert-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/vigilert.png",
+    "icon": "./assets/Images/vigilert-icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/vigilert.png",
+      "image": "./assets/Images/vigilert-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -15,16 +15,26 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "We need your permission to record audio for emergency alerts."
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/vigilert.png",
+        "foregroundImage": "./assets/Images/vigilert-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.iamalmuhandis.vigilertapp",
+      "permissions": ["RECORD_AUDIO"]
     },
     "web": {
-      "favicon": "./assets/vigilert.png"
+      "favicon": "./assets/Images/vigilert-icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ded65d4d-ccaf-441e-8c55-d557ac9685f4"
+      }
     }
   }
 }
