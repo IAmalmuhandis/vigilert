@@ -34,7 +34,14 @@ const Dashboard = ({ navigation }) => {
       } catch (err) {
         console.warn(err);
       }
-    }
+     } else if (Platform.OS === 'ios') {
+        const { status } = await Permissions.askAsync(Permissions.AUDIO_RECORDING);
+        if (status === 'granted') {
+          console.log('Audio permission granted');
+        } else {
+          console.log('Audio permission denied');
+        }
+      }
   };
 
   async function startRecording() {
