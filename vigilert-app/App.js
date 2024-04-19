@@ -7,6 +7,8 @@ import Dashboard from "./screens/Dashboard";
 import Profile from "./screens/Profile";
 import Alerts from "./screens/Alerts";
 import Chat from './screens/Chat';
+import MapScreen from './screens/Map';
+
 const Stack = createStackNavigator();
 const App = () => {
   
@@ -20,6 +22,7 @@ const App = () => {
         <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="Alerts" component={Alerts} />
         <Stack.Screen name="Chat" component={Chat} />
+        <Stack.Screen name="Map" component={MapScreen} /> 
       </Stack.Navigator>
     </NavigationContainer>
   );

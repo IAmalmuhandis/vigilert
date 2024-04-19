@@ -26,12 +26,21 @@ const Bottombar = ({unreadAlerts }) => {
       <TouchableOpacity
         style={styles.bottombarItem}
         onPress={() => {
-          // Handle navigation to the profile screen
-          navigation.navigate('Profile');
+          // Handle navigation to the Chat screen
+          navigation.navigate('Chat');
         }}
       >
-        <FontAwesome name="user" size={30} color={classes.tertiaryColor} />
+        <FontAwesome name="comments" size={30} color={classes.tertiaryColor} />
       </TouchableOpacity>
+      <TouchableOpacity
+  style={styles.bottombarItem}
+  onPress={() => {
+    // Handle navigation to the Map screen
+    navigation.navigate('Map');
+  }}
+>
+  <FontAwesome name="map" size={30} color={classes.tertiaryColor} />
+</TouchableOpacity>
       <TouchableOpacity
         style={styles.bottombarItem}
         onPress={() => {
@@ -49,23 +58,16 @@ const Bottombar = ({unreadAlerts }) => {
           )}
         </View>
       </TouchableOpacity>
+    
       <TouchableOpacity
         style={styles.bottombarItem}
         onPress={() => {
-          // Handle navigation to the Chat screen
-          navigation.navigate('Chat');
+          // Handle navigation to the profile screen
+          navigation.navigate('Profile');
         }}
       >
-        <FontAwesome name="comments" size={30} color={classes.tertiaryColor} />
+        <FontAwesome name="user" size={30} color={classes.tertiaryColor} />
       </TouchableOpacity>
-      {/* <TouchableOpacity
-        style={styles.bottombarItem}
-        onPress={() => {
-          // Handle navigation to the settings screen
-        }}
-      >
-        <FontAwesome name="cog" size={30} color={classes.tertiaryColor} />
-      </TouchableOpacity> */}
     </View>
   );
 };
